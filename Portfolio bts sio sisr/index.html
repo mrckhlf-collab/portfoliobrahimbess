@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Brahim Bessghaier | Étudiant BTS SIO SISR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="prefix">PORTFOLIO</span><span>_BTS_SIO</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#propos">À propos</a></li>
+                <li><a href="#experience">Parcours</a></li>
+                <li><a href="#projets">Projets BTS</a></li>
+                <li><a href="#projets-perso">Projets Perso</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#veille">Veille</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="auth-nav-item" style="display: none;">
+                    <a href="javascript:void(0)" class="btn-login" id="login-trigger">
+                        <i class="fas fa-user-lock"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero active">
+            <div class="hero-content">
+                <h1>Brahim Bessghaier</h1>
+                <p class="tagline-blue">Étudiant en BTS SIO option SISR</p>
+                <a href="#propos" class="btn">Découvrir mon profil</a>
+            </div>
+        </section>
+
+        <section id="propos">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="propos-container">
+                <div class="propos-card">
+                    <h3><i class="fas fa-user-tag"></i> Présentation</h3>
+                    <p>Je suis un étudiant passionné en BTS SIO avec une spécialisation en SISR au Lycée Louise Michel à Bobigny. Ma formation me permet d'acquérir des compétences techniques solides dans la gestion, la maintenance et la sécurisation des réseaux informatiques, ainsi que dans l’administration des systèmes.</p>
+                </div>
+                <div class="propos-card">
+                    <h3><i class="fas fa-bullseye"></i> Objectifs</h3>
+                    <p>Mon objectif est de poursuivre mes études en licence professionnelle et ensuite de me spécialiser dans le cloud.</p>
+                </div>
+            </div>
+            <div class="propos-actions">
+                <a href="#" class="btn"><i class="fas fa-file-download"></i> Télécharger mon CV</a>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">Mon Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="date">Septembre 2024 - Juillet 2026</div>
+                    <div class="content">
+                        <h3>BTS SIO option SISR</h3>
+                        <p><strong>Lycée Louise Michel, Bobigny</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">Juillet 2024</div>
+                    <div class="content">
+                        <h3>Baccalauréat STI2D</h3>
+                        <p><strong>Lycée Le Corbusier, Aubervilliers</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="date">Septembre 2022 - Juillet 2024</div>
+                    <div class="content">
+                        <h3>Lycée (STI2D)</h3>
+                        <p><strong>Lycée Le Corbusier, Aubervilliers</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projets">
+            <h2 class="section-title">Mes Réalisations BTS</h2>
+            <div class="bts-grid">
+                <!-- BTS SIO 1 -->
+                <div class="bts-year-card">
+                    <h3>BTS SIO 1</h3>
+                    <div class="bts-sub-grid">
+                        <div class="bts-item" onclick="toggleDetails('sio1-projets')">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Projet</span>
+                        </div>
+                        <div class="bts-item" onclick="toggleDetails('sio1-stages')">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Stage</span>
+                        </div>
+                    </div>
+                    <div id="sio1-projets" class="bts-details">
+                        <h4>Projet BTS 1ère année</h4>
+                        <ul>
+                            <li>Mise en place d'un réseau local sécurisé</li>
+                            <li>Configuration de services réseaux (DNS, DHCP)</li>
+                        </ul>
+                    </div>
+                    <div id="sio1-stages" class="bts-details">
+                        <h4>Stage BTS 1ère année</h4>
+                        <p>Stage à l'Hôpital Avicenne</p>
+                    </div>
+                </div>
+
+                <!-- BTS SIO 2 -->
+                <div class="bts-year-card">
+                    <h3>BTS SIO 2</h3>
+                    <div class="bts-sub-grid">
+                        <div class="bts-item" onclick="toggleDetails('sio2-projets')">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Projet</span>
+                        </div>
+                        <div class="bts-item" onclick="toggleDetails('sio2-stages')">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Stage</span>
+                        </div>
+                        <div class="bts-item" onclick="toggleDetails('sio2-procedures')">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Procédures</span>
+                        </div>
+                    </div>
+                    <div id="sio2-projets" class="bts-details">
+                        <h4>Projet BTS 2ème année</h4>
+                        <p>En cours de réalisation...</p>
+                    </div>
+                    <div id="sio2-stages" class="bts-details">
+                        <h4>Stage BTS 2ème année</h4>
+                        <p>Stage dans un Lyca Mobile</p>
+                    </div>
+                    <div id="sio2-procedures" class="bts-details">
+                        <!-- Vide comme demandé -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projets-perso">
+            <h2 class="section-title">Mes Projets Personnels</h2>
+            <div class="bts-grid">
+                <div class="bts-year-card">
+                    <p style="text-align: center; font-style: italic; opacity: 0.7;">
+                        <i class="fas fa-tools" style="font-size: 2rem; display: block; margin-bottom: 1rem; color: var(--accent-color);"></i>
+                        Cette section est en cours de préparation. De nouveaux projets personnels seront bientôt ajoutés.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences">
+            <h2 class="section-title">Tableau de Compétences</h2>
+            <div class="skills-minimal-container">
+                <div class="skills-glass-box">
+                    <p>Mon tableau de compétences (E4/E6) répertorie l'ensemble des missions et compétences techniques validées durant mon parcours en BTS SIO SISR.</p>
+                    <a href="#" class="btn-large"><i class="fas fa-file-download"></i> Télécharger le Tableau de Compétences</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <i class="fas fa-shield-virus"></i>
+                    <h3>Club EBIOS</h3>
+                    <p>Introduction à la méthode EBIOS Risk Manager</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>ANSSI</h3>
+                    <p>SecNumAcadémie - 4 modules validés (Panorama, Authentification, Internet, Poste de travail)</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <img src="https://www.cisco.com/c/dam/cdc/i/product-logos/cisco-networking-academy-logo.png" alt="Cisco Logo" style="width: 80px; margin-bottom: 1rem;">
+                    </div>
+                    <h3>Cisco</h3>
+                    <p>Networking Academy - Sécurité des terminaux</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>PIX</h3>
+                    <p>Certification Pix - Score: 349 / 895 (Niveau Indépendant 1)</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>RGPD</h3>
+                    <p>CNIL - Module 1 : Le RGPD et ses notions clés (Score: 100%)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="veille">
+            <h2 class="section-title">Veille Technologique : Sécurité Blockchain</h2>
+            <div class="veille-container">
+                <div class="ransomware-schema">
+                    <h3><i class="fas fa-link"></i> Fonctionnement & Attaques Blockchain</h3>
+                    <div class="schema-box">
+                        <div class="step">
+                            <i class="fas fa-cube"></i>
+                            <span>1. Consensus (PoW/PoS)</span>
+                        </div>
+                        <div class="arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+                        <div class="step">
+                            <i class="fas fa-user-secret"></i>
+                            <span>2. Attaque des 51%</span>
+                        </div>
+                        <div class="arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+                        <div class="step">
+                            <i class="fas fa-file-code"></i>
+                            <span>3. Faille Smart Contract</span>
+                        </div>
+                        <div class="arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+                        <div class="step">
+                            <i class="fas fa-wallet"></i>
+                            <span>4. Exfiltration de fonds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="veille-intro">
+                    <div class="veille-card">
+                        <h3>Qu'est-ce que la Blockchain ?</h3>
+                        <p>Une technologie de stockage et de transmission d'informations, transparente, sécurisée, et fonctionnant sans organe central de contrôle.</p>
+                    </div>
+                    <div class="veille-card">
+                        <h3>Vulnérabilités Majeures</h3>
+                        <ul>
+                            <li>Attaques sur le consensus (51%)</li>
+                            <li>Bugs dans les contrats intelligents</li>
+                            <li>Failles de portefeuilles (Wallets)</li>
+                            <li>Phishing & Social Engineering</li>
+                        </ul>
+                    </div>
+                    <div class="veille-card">
+                        <h3>Sécurisation</h3>
+                        <ul>
+                            <li>Audits de Smart Contracts</li>
+                            <li>Utilisation de Cold Wallets</li>
+                            <li>Multi-signature (Multi-sig)</li>
+                            <li>Surveillance On-chain</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3 class="rss-title"><i class="fas fa-rss"></i> Actualités Cyber-Blockchain (Flux Automatisé 2026)</h3>
+                <div id="rss-feed" class="rss-grid">
+                    <div class="rss-item loading">Connexion au flux Cointelegraph / Cyber-Blockchain...</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contactez-moi</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> brahimbessghaier@gmail.com</p>
+                    <p><i class="fab fa-linkedin"></i> linkedin.com/in/brahimbessghaier</p>
+                </div>
+                <form id="contact-form">
+                    <input type="text" placeholder="Nom" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Votre message" rows="5" required></textarea>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Brahim Bessghaier - Portfolio BTS SIO SISR</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
